@@ -28,14 +28,22 @@ class Battle:
         self.selected_attack = attack_index
         self.apply_attack(self.player, self.opponent, attack_index)
         
-        # Vérifier si l'adversaire est KO
+        # Vérifier si l'adversaire est KO (mais ne pas terminer le jeu ici)
         if self.opponent.pv <= 0:
-            self.game_over = True
-            self.winner = self.player.name
-            self.battle_log.append(f"{self.opponent.name} est KO! {self.player.name} a gagné!")
+            self.battle_log.append(f"{self.opponent.name} est KO!")
+            # Le game_over sera géré par main.py qui vérifie s'il reste des fighters
             return True
         
         # Passer au tour de l'adversaire
+        self.current_turn = "opponent"
+        return True
+    
+    def skip_turn(self):
+        """Le joueur passe son tour"""
+        if self.current_turn != "player":
+            return False
+        
+        self.battle_log.append(f"{self.player.name} passe son tour!")
         self.current_turn = "opponent"
         return True
     
@@ -47,6 +55,8 @@ class Battle:
         
         if not available_attacks:
             self.battle_log.append(f"{self.opponent.name} n'a plus assez de PP!")
+            # Mettre les PP à 0 pour déclencher le switch
+            self.opponent.pp = 0
             self.current_turn = "player"
             self.turn_number += 1
             return
@@ -54,11 +64,10 @@ class Battle:
         attack_index = random.choice(available_attacks)
         self.apply_attack(self.opponent, self.player, attack_index)
         
-        # Vérifier si le joueur est KO
+        # Vérifier si le joueur est KO (mais ne pas terminer le jeu ici)
         if self.player.pv <= 0:
-            self.game_over = True
-            self.winner = self.opponent.name
-            self.battle_log.append(f"{self.player.name} est KO! {self.opponent.name} a gagné!")
+            self.battle_log.append(f"{self.player.name} est KO!")
+            # Le game_over sera géré par main.py qui vérifie s'il reste des fighters
         else:
             self.current_turn = "player"
             self.turn_number += 1

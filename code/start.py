@@ -16,23 +16,23 @@ def print_header():
 
 def check_requirements():
     """Vérifie si pygame est installé"""
-    print("1️⃣  VÉRIFICATION DES DÉPENDANCES")
+    print("1. VERIFICATION DES DEPENDANCES")
     print("-" * 70)
     
     try:
         import pygame
-        print("✅ Pygame est installé")
+        print("OK Pygame est installe")
         return True
     except ImportError:
-        print("❌ Pygame n'est pas installé!")
-        print("\n   Pour installer pygame, exécutez:")
+        print("ERREUR Pygame n'est pas installe!")
+        print("\n   Pour installer pygame, executez:")
         print("   > pip install pygame")
         print("\n   Puis relancez ce script.")
         return False
 
 def check_images():
     """Vérifie la présence des images"""
-    print("\n2️⃣  VÉRIFICATION DES IMAGES")
+    print("\n2. VERIFICATION DES IMAGES")
     print("-" * 70)
     
     images = [
@@ -44,13 +44,13 @@ def check_images():
     all_present = True
     for path, desc in images:
         if os.path.exists(path):
-            print(f"✅ {desc}")
+            print(f"OK {desc}")
         else:
-            print(f"❌ {desc} - MANQUANT")
+            print(f"ERREUR {desc} - MANQUANT")
             all_present = False
     
     if not all_present:
-        print("\n⚠️  ATTENTION: Des images manquent!")
+        print("\n ATTENTION: Des images manquent!")
         print("   Consultez: ../images/README_IMAGES.md")
         return False
     
@@ -58,11 +58,11 @@ def check_images():
 
 def check_data():
     """Vérifie les fichiers de données"""
-    print("\n3️⃣  VÉRIFICATION DES DONNÉES")
+    print("\n3. VERIFICATION DES DONNEES")
     print("-" * 70)
     
     if os.path.exists("data/stats.json"):
-        print("✅ Fichier data/stats.json trouvé")
+        print("OK Fichier data/stats.json trouve")
         try:
             import json
             with open("data/stats.json", 'r', encoding='utf-8') as f:
@@ -71,10 +71,10 @@ def check_data():
             print(f"   Combattants: {', '.join(fighters)}")
             return True
         except Exception as e:
-            print(f"❌ Erreur dans stats.json: {e}")
+            print(f"ERREUR Erreur dans stats.json: {e}")
             return False
     else:
-        print("❌ Fichier data/stats.json MANQUANT")
+        print("ERREUR Fichier data/stats.json MANQUANT")
         return False
 
 def main():
@@ -95,13 +95,13 @@ def main():
     # Résultat
     print("\n" + "=" * 70)
     if data_ok:
-        print("✅ CONFIGURATION OK - Prêt à lancer!")
-        print("\nPour lancer le jeu, exécutez:")
+        print("OK CONFIGURATION OK - Pret a lancer!")
+        print("\nPour lancer le jeu, executez:")
         print("   > python main.py")
         print("\n" + "=" * 70)
         return 0
     else:
-        print("❌ CONFIGURATION INCOMPLÈTE")
+        print("ERREUR CONFIGURATION INCOMPLETE")
         if not img_ok:
             print("\nImages manquantes!")
             print("Consultez: ../images/README_IMAGES.md")

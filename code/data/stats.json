@@ -68,7 +68,7 @@
                 }
             ]
         },
-        "Magicien": {
+        "Sorcier": {
             "pv": 500,
             "pp": 120,
             "attaques": [
@@ -102,7 +102,7 @@
                 }
             ]
         },
-        "Géant": {
+        "Geant": {
             "pv": 1200,
             "pp": 90,
             "attaques": [
@@ -136,7 +136,7 @@
                 }
             ]
         },
-        "Prêtresse": {
+        "Soigneuse": {
             "pv": 700,
             "pp": 110,
             "attaques": [
@@ -170,7 +170,7 @@
                 }
             ]
         },
-        "Assassin": {
+        "Voleuse": {
             "pv": 550,
             "pp": 85,
             "attaques": [
@@ -204,7 +204,7 @@
                 }
             ]
         },
-        "Tanneur": {
+        "Bucheron": {
             "pv": 950,
             "pp": 95,
             "attaques": [
@@ -238,7 +238,7 @@
                 }
             ]
         },
-        "Espion": {
+        "Ghost": {
             "pv": 480,
             "pp": 90,
             "attaques": [
@@ -272,41 +272,41 @@
                 }
             ]
         },
-        "Alchimiste": {
-            "pv": 620,
-            "pp": 100,
+        "Sorciere": {
+            "pv": 400,
+            "pp": 120,
             "attaques": [
                 {
-                    "nom": "Éclaboussure acide",
-                    "degat": 52,
-                    "cout_pp": 10,
-                    "effet": "poison",
-                    "critique": 8
+                    "nom": "Bouillon de chauve-souris",
+                    "degat": 45,
+                    "cout_pp": 8,
+                    "effet": "drain",
+                    "critique": 7
                 },
                 {
-                    "nom": "Potion explosive",
-                    "degat": 85,
-                    "cout_pp": 15,
-                    "effet": "multi_cible",
-                    "critique": 6
-                },
-                {
-                    "nom": "Antidote",
-                    "degat": 0,
+                    "nom": "Malédiction des ombres",
+                    "degat": 60,
                     "cout_pp": 12,
-                    "effet": "guérison_poison",
-                    "critique": 0
+                    "effet": "réduction_défense",
+                    "critique": 10
                 },
                 {
-                    "nom": "Mixture puissante",
-                    "degat": 105,
-                    "cout_pp": 22,
-                    "effet": "brulure",
-                    "critique": 14
+                    "nom": "Souffle empoisonné",
+                    "degat": 55,
+                    "cout_pp": 14,
+                    "effet": "poison",
+                    "critique": 9
+                },
+                {
+                    "nom": "Chaudron explosif",
+                    "degat": 90,
+                    "cout_pp": 25,
+                    "effet": "zone",
+                    "critique": 15
                 }
             ]
         },
-        "Paladin": {
+        "Prince": {
             "pv": 900,
             "pp": 105,
             "attaques": [
