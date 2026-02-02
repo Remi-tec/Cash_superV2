@@ -1,107 +1,76 @@
-# Clash Royal - Jeu Pokémon Tour par Tour
+# Clash Royal - Jeu de Combat Tour par Tour
 
-Un jeu de combat tour par tour inspiré de Pokémon, utilisant les personnages de Clash Royale, développé avec Pygame.
+Un jeu de combat tour par tour utilisant les personnages de Clash Royale, développé avec Pygame.
 
-## Structure du Projet
+## 🚀 Démarrage Rapide
 
-```
-Clash_superV2/
-│
-├── main.py                          # Point d'entrée du jeu
-│
-├── assets/                          # Ressources du jeu
-│   ├── images/                      # Images et sprites
-│   │   ├── characters/              # Sprites des personnages
-│   │   ├── backgrounds/             # Arrière-plans des combats
-│   │   ├── ui/                      # Éléments d'interface
-│   │   └── effects/                 # Effets visuels (attaques, etc.)
-│   │
-│   ├── sounds/                      # Effets sonores et musiques
-│   │   ├── music/                   # Musiques de fond
-│   │   └── sfx/                     # Effets sonores
-│   │
-│   └── fonts/                       # Polices de caractères
-│
-├── src/                             # Code source
-│   ├── __init__.py
-│   │
-│   ├── characters/                  # Gestion des personnages
-│   │   ├── __init__.py
-│   │   ├── character.py             # Classe de base Character
-│   │   ├── player_character.py      # Personnage du joueur
-│   │   ├── enemy_character.py       # Personnage ennemi
-│   │   └── character_data.py        # Données des personnages Clash Royale
-│   │
-│   ├── combat/                      # Système de combat
-│   │   ├── __init__.py
-│   │   ├── battle.py                # Logique du combat tour par tour
-│   │   ├── moves.py                 # Attaques et capacités
-│   │   └── battle_ai.py             # IA pour les ennemis
-│   │
-│   ├── ui/                          # Interface utilisateur
-│   │   ├── __init__.py
-│   │   ├── menu.py                  # Menu principal
-│   │   ├── battle_ui.py             # Interface de combat
-│   │   ├── character_selection.py   # Sélection de personnages
-│   │   └── hud.py                   # Affichage PV, infos, etc.
-│   │
-│   ├── screens/                     # Différents écrans du jeu
-│   │   ├── __init__.py
-│   │   ├── title_screen.py          # Écran titre
-│   │   ├── battle_screen.py         # Écran de combat
-│   │   └── victory_screen.py        # Écran victoire/défaite
-│   │
-│   └── utils/                       # Utilitaires
-│       ├── __init__.py
-│       ├── config.py                # Configuration (résolution, FPS, etc.)
-│       ├── assets_loader.py         # Chargement des ressources
-│       └── animation.py             # Gestion des animations
-│
-├── data/                            # Données du jeu
-│   ├── characters.json              # Stats des personnages
-│   └── moves.json                   # Liste des attaques
-│
-├── requirements.txt                 # Dépendances Python
-└── README.md                        # Ce fichier
-```
-
-## Modules Principaux
-
-### 1. **Characters** (`src/characters/`)
-- Gestion des personnages Clash Royale (Chevalier, Archer, Dragon, Géant, etc.)
-- Stats : PV, Attaque, Défense, Vitesse
-- Système de types/affinités
-
-### 2. **Combat** (`src/combat/`)
-- Système tour par tour
-- Sélection d'attaques
-- Calcul des dégâts
-- IA pour les adversaires
-
-### 3. **UI** (`src/ui/`)
-- Menu principal
-- Interface de combat (barres de vie, boutons d'action)
-- Sélection de personnages
-- Affichage des informations
-
-### 4. **Screens** (`src/screens/`)
-- Gestion des différents écrans (titre, combat, victoire)
-- Transitions entre les écrans
-
-## Installation
-
+### 1. Installation
 ```bash
 pip install -r requirements.txt
 ```
 
-## Lancement du Jeu
-
+### 2. Lancement
 ```bash
+cd code
 python main.py
 ```
 
-## Technologies Utilisées
+## 📖 Documentation
 
-- **Python 3.x**
-- **Pygame** - Moteur de jeu
-- **JSON** - Stockage des données
+Ce projet dispose de deux guides principaux :
+
+### 🎮 [LANCEMENT_DU_JEU.md](LANCEMENT_DU_JEU.md)
+- Comment installer et lancer le jeu
+- Structure des données (stats.json)
+- Organisation des fichiers
+- Préparation des images
+- Contrôles du jeu
+- Guide de dépannage
+
+### 👥 [AJOUTER_PERSONNAGES.md](AJOUTER_PERSONNAGES.md)
+- Comment ajouter un nouveau personnage
+- Édition du fichier stats.json
+- Préparation des images (vue de dos et de face)
+- Exemples complets
+- Erreurs courantes et solutions
+
+## 📁 Structure du Projet
+
+```
+code/
+├── main.py              # Point d'entrée du jeu
+├── Fighter.py           # Classes Fighter et Opponent
+├── battle.py            # Logique du combat
+├── hud.py               # Interface graphique
+├── settings.py          # Configuration
+├── support.py           # Utilitaires
+├── timer.py             # Système de timer
+└── data/
+    └── stats.json       # Données des combattants
+
+images/
+├── back/                # Images du joueur (vue de dos)
+├── front/               # Images de l'adversaire (vue de face)
+└── other/               # Images de fond
+```
+
+## ⚙️ Configuration
+
+Tous les paramètres du jeu peuvent être ajustés dans `code/settings.py`:
+- Résolution de la fenêtre
+- FPS (images par seconde)
+- Dimensions des sprites
+
+## 🎮 Mécanique de Jeu
+
+**Système de Combat Tour par Tour**
+- Sélectionnez une attaque et confirmez
+- L'IA de l'adversaire joue automatiquement
+- Combat jusqu'à KO (PV = 0)
+
+## 📋 Spécifications
+
+- **Python** : 3.8+
+- **Pygame** : 2.0+
+- **Format données** : JSON
+- **Format images** : PNG
