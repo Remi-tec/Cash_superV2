@@ -1,0 +1,344 @@
+{
+    "fighters": {
+        "Chevalier": {
+            "pv": 800,
+            "pp": 100,
+            "attaques": [
+                {
+                    "nom": "Coup d'épée",
+                    "degat": 45,
+                    "cout_pp": 5,
+                    "effet": "normal",
+                    "critique": 5
+                },
+                {
+                    "nom": "Charge",
+                    "degat": 70,
+                    "cout_pp": 10,
+                    "effet": "repousse",
+                    "critique": 10
+                },
+                {
+                    "nom": "Défense",
+                    "degat": 0,
+                    "cout_pp": 8,
+                    "effet": "reduction_degat",
+                    "critique": 0
+                },
+                {
+                    "nom": "Frappe puissante",
+                    "degat": 120,
+                    "cout_pp": 20,
+                    "effet": "etourdi",
+                    "critique": 20
+                }
+            ]
+        },
+        "Archer": {
+            "pv": 600,
+            "pp": 80,
+            "attaques": [
+                {
+                    "nom": "Tir rapide",
+                    "degat": 35,
+                    "cout_pp": 5,
+                    "effet": "normal",
+                    "critique": 10
+                },
+                {
+                    "nom": "Tir de précision",
+                    "degat": 60,
+                    "cout_pp": 12,
+                    "effet": "normal",
+                    "critique": 35
+                },
+                {
+                    "nom": "Volée de flèches",
+                    "degat": 50,
+                    "cout_pp": 10,
+                    "effet": "multi_cible",
+                    "critique": 5
+                },
+                {
+                    "nom": "Flèche empoisonnée",
+                    "degat": 55,
+                    "cout_pp": 15,
+                    "effet": "poison",
+                    "critique": 15
+                }
+            ]
+        },
+        "Magicien": {
+            "pv": 500,
+            "pp": 120,
+            "attaques": [
+                {
+                    "nom": "Éclair",
+                    "degat": 50,
+                    "cout_pp": 10,
+                    "effet": "paralysie",
+                    "critique": 12
+                },
+                {
+                    "nom": "Boule de feu",
+                    "degat": 75,
+                    "cout_pp": 15,
+                    "effet": "brulure",
+                    "critique": 8
+                },
+                {
+                    "nom": "Gel",
+                    "degat": 60,
+                    "cout_pp": 12,
+                    "effet": "gelé",
+                    "critique": 10
+                },
+                {
+                    "nom": "Explosion magique",
+                    "degat": 100,
+                    "cout_pp": 25,
+                    "effet": "multi_cible",
+                    "critique": 15
+                }
+            ]
+        },
+        "Géant": {
+            "pv": 1200,
+            "pp": 90,
+            "attaques": [
+                {
+                    "nom": "Coup de poing",
+                    "degat": 80,
+                    "cout_pp": 8,
+                    "effet": "normal",
+                    "critique": 8
+                },
+                {
+                    "nom": "Tremblement",
+                    "degat": 90,
+                    "cout_pp": 12,
+                    "effet": "multi_cible",
+                    "critique": 5
+                },
+                {
+                    "nom": "Écrasement",
+                    "degat": 130,
+                    "cout_pp": 20,
+                    "effet": "etourdi",
+                    "critique": 10
+                },
+                {
+                    "nom": "Rugissement",
+                    "degat": 0,
+                    "cout_pp": 5,
+                    "effet": "augmente_atk",
+                    "critique": 0
+                }
+            ]
+        },
+        "Prêtresse": {
+            "pv": 700,
+            "pp": 110,
+            "attaques": [
+                {
+                    "nom": "Coup de bâton",
+                    "degat": 40,
+                    "cout_pp": 5,
+                    "effet": "normal",
+                    "critique": 5
+                },
+                {
+                    "nom": "Lumière sacrée",
+                    "degat": 65,
+                    "cout_pp": 12,
+                    "effet": "normal",
+                    "critique": 12
+                },
+                {
+                    "nom": "Soin",
+                    "degat": 0,
+                    "cout_pp": 18,
+                    "effet": "heal",
+                    "critique": 0
+                },
+                {
+                    "nom": "Bénédiction",
+                    "degat": 0,
+                    "cout_pp": 15,
+                    "effet": "augmente_def",
+                    "critique": 0
+                }
+            ]
+        },
+        "Assassin": {
+            "pv": 550,
+            "pp": 85,
+            "attaques": [
+                {
+                    "nom": "Coup d'épée courte",
+                    "degat": 42,
+                    "cout_pp": 5,
+                    "effet": "normal",
+                    "critique": 15
+                },
+                {
+                    "nom": "Attaque sournoise",
+                    "degat": 85,
+                    "cout_pp": 15,
+                    "effet": "normal",
+                    "critique": 40
+                },
+                {
+                    "nom": "Évanouissement",
+                    "degat": 0,
+                    "cout_pp": 10,
+                    "effet": "evasion",
+                    "critique": 0
+                },
+                {
+                    "nom": "Coup mortel",
+                    "degat": 110,
+                    "cout_pp": 22,
+                    "effet": "normal",
+                    "critique": 50
+                }
+            ]
+        },
+        "Tanneur": {
+            "pv": 950,
+            "pp": 95,
+            "attaques": [
+                {
+                    "nom": "Coup d'hache",
+                    "degat": 65,
+                    "cout_pp": 8,
+                    "effet": "normal",
+                    "critique": 8
+                },
+                {
+                    "nom": "Charge berserker",
+                    "degat": 110,
+                    "cout_pp": 18,
+                    "effet": "repousse",
+                    "critique": 12
+                },
+                {
+                    "nom": "Armure écailleuse",
+                    "degat": 0,
+                    "cout_pp": 10,
+                    "effet": "reduction_degat",
+                    "critique": 0
+                },
+                {
+                    "nom": "Cri de rage",
+                    "degat": 55,
+                    "cout_pp": 12,
+                    "effet": "augmente_atk",
+                    "critique": 5
+                }
+            ]
+        },
+        "Espion": {
+            "pv": 480,
+            "pp": 90,
+            "attaques": [
+                {
+                    "nom": "Couteau",
+                    "degat": 38,
+                    "cout_pp": 5,
+                    "effet": "normal",
+                    "critique": 20
+                },
+                {
+                    "nom": "Poison rapide",
+                    "degat": 48,
+                    "cout_pp": 12,
+                    "effet": "poison",
+                    "critique": 12
+                },
+                {
+                    "nom": "Invisibilité",
+                    "degat": 0,
+                    "cout_pp": 15,
+                    "effet": "evasion",
+                    "critique": 0
+                },
+                {
+                    "nom": "Coup dans le dos",
+                    "degat": 95,
+                    "cout_pp": 20,
+                    "effet": "normal",
+                    "critique": 55
+                }
+            ]
+        },
+        "Alchimiste": {
+            "pv": 620,
+            "pp": 100,
+            "attaques": [
+                {
+                    "nom": "Éclaboussure acide",
+                    "degat": 52,
+                    "cout_pp": 10,
+                    "effet": "poison",
+                    "critique": 8
+                },
+                {
+                    "nom": "Potion explosive",
+                    "degat": 85,
+                    "cout_pp": 15,
+                    "effet": "multi_cible",
+                    "critique": 6
+                },
+                {
+                    "nom": "Antidote",
+                    "degat": 0,
+                    "cout_pp": 12,
+                    "effet": "guérison_poison",
+                    "critique": 0
+                },
+                {
+                    "nom": "Mixture puissante",
+                    "degat": 105,
+                    "cout_pp": 22,
+                    "effet": "brulure",
+                    "critique": 14
+                }
+            ]
+        },
+        "Paladin": {
+            "pv": 900,
+            "pp": 105,
+            "attaques": [
+                {
+                    "nom": "Coup de marteau",
+                    "degat": 70,
+                    "cout_pp": 8,
+                    "effet": "normal",
+                    "critique": 7
+                },
+                {
+                    "nom": "Sceau divin",
+                    "degat": 80,
+                    "cout_pp": 15,
+                    "effet": "sacré",
+                    "critique": 10
+                },
+                {
+                    "nom": "Bouclier sacré",
+                    "degat": 0,
+                    "cout_pp": 12,
+                    "effet": "augmente_def",
+                    "critique": 0
+                },
+                {
+                    "nom": "Jugement",
+                    "degat": 125,
+                    "cout_pp": 25,
+                    "effet": "normal",
+                    "critique": 18
+                }
+            ]
+        }
+    }
+}
